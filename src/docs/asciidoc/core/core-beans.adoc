@@ -9292,7 +9292,7 @@ annotation to the method declaration, as the following example shows:
 ==== Generic Events
 
 You can also use generics to further define the structure of your event. Consider using an
-`EntityCreatedEvent<T>` where `T` is the type of the actual entity that got created. For example, you
+`EntityCreatedEvent<T>` where `T` is the type of the actual com.spring.entity that got created. For example, you
 can create the following listener definition to receive only `EntityCreatedEvent` for a
 `Person`:
 
@@ -9322,8 +9322,8 @@ environment provides. The following event shows how to do so:
 ----
 	public class EntityCreatedEvent<T> extends ApplicationEvent implements ResolvableTypeProvider {
 
-		public EntityCreatedEvent(T entity) {
-			super(entity);
+		public EntityCreatedEvent(T com.spring.entity) {
+			super(com.spring.entity);
 		}
 
 		@Override

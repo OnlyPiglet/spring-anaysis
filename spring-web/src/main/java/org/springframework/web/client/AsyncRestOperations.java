@@ -52,13 +52,13 @@ public interface AsyncRestOperations {
 	// GET
 
 	/**
-	 * Asynchronously retrieve an entity by doing a GET on the specified URL.
+	 * Asynchronously retrieve an com.spring.entity by doing a GET on the specified URL.
 	 * The response is converted and stored in an {@link ResponseEntity}.
 	 * <p>URI Template variables are expanded using the given URI variables, if any.
 	 * @param url the URL
 	 * @param responseType the type of the return value
 	 * @param uriVariables the variables to expand the template
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> getForEntity(String url, Class<T> responseType,
 			Object... uriVariables) throws RestClientException;
@@ -70,7 +70,7 @@ public interface AsyncRestOperations {
 	 * @param url the URL
 	 * @param responseType the type of the return value
 	 * @param uriVariables the map containing variables for the URI template
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> getForEntity(String url, Class<T> responseType,
 			Map<String, ?> uriVariables) throws RestClientException;
@@ -80,7 +80,7 @@ public interface AsyncRestOperations {
 	 * The response is converted and stored in an {@link ResponseEntity}.
 	 * @param url the URL
 	 * @param responseType the type of the return value
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> getForEntity(URI url, Class<T> responseType)
 			throws RestClientException;
@@ -164,7 +164,7 @@ public interface AsyncRestOperations {
 	 * @param url the URL
 	 * @param request the Object to be POSTed (may be {@code null})
 	 * @param uriVariables the variables to expand the template
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 * @see org.springframework.http.HttpEntity
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> postForEntity(String url, @Nullable HttpEntity<?> request,
@@ -177,7 +177,7 @@ public interface AsyncRestOperations {
 	 * @param url the URL
 	 * @param request the Object to be POSTed (may be {@code null})
 	 * @param uriVariables the variables to expand the template
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 * @see org.springframework.http.HttpEntity
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> postForEntity(String url, @Nullable HttpEntity<?> request,
@@ -188,7 +188,7 @@ public interface AsyncRestOperations {
 	 * and asynchronously returns the response as {@link ResponseEntity}.
 	 * @param url the URL
 	 * @param request the Object to be POSTed (may be {@code null})
-	 * @return the entity wrapped in a {@link Future}
+	 * @return the com.spring.entity wrapped in a {@link Future}
 	 * @see org.springframework.http.HttpEntity
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> postForEntity(URI url, @Nullable HttpEntity<?> request,
@@ -294,16 +294,16 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the
-	 * given request entity to the request, and returns the response as
+	 * given request com.spring.entity to the request, and returns the response as
 	 * {@link ResponseEntity}.
 	 * <p>URI Template variables are expanded using the given URI variables, if any.
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the request
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the request
 	 * (may be {@code null})
 	 * @param responseType the type of the return value
 	 * @param uriVariables the variables to expand in the template
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, Class<T> responseType, Object... uriVariables)
@@ -311,16 +311,16 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the
-	 * given request entity to the request, and returns the response as
+	 * given request com.spring.entity to the request, and returns the response as
 	 * {@link ResponseEntity}.
 	 * <p>URI Template variables are expanded using the given URI variables, if any.
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the request
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the request
 	 * (may be {@code null})
 	 * @param responseType the type of the return value
 	 * @param uriVariables the variables to expand in the template
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, Class<T> responseType,
@@ -328,14 +328,14 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the
-	 * given request entity to the request, and returns the response as
+	 * given request com.spring.entity to the request, and returns the response as
 	 * {@link ResponseEntity}.
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the request
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the request
 	 * (may be {@code null})
 	 * @param responseType the type of the return value
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(URI url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, Class<T> responseType)
@@ -343,7 +343,7 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the given
-	 * request entity to the request, and returns the response as {@link ResponseEntity}.
+	 * request com.spring.entity to the request, and returns the response as {@link ResponseEntity}.
 	 * The given {@link ParameterizedTypeReference} is used to pass generic type
 	 * information:
 	 * <pre class="code">
@@ -355,11 +355,11 @@ public interface AsyncRestOperations {
 	 * </pre>
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the
 	 * request (may be {@code null})
 	 * @param responseType the type of the return value
 	 * @param uriVariables the variables to expand in the template
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, ParameterizedTypeReference<T> responseType,
@@ -367,7 +367,7 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the given
-	 * request entity to the request, and returns the response as {@link ResponseEntity}.
+	 * request com.spring.entity to the request, and returns the response as {@link ResponseEntity}.
 	 * The given {@link ParameterizedTypeReference} is used to pass generic type
 	 * information:
 	 * <pre class="code">
@@ -379,11 +379,11 @@ public interface AsyncRestOperations {
 	 * </pre>
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the request
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the request
 	 * (may be {@code null})
 	 * @param responseType the type of the return value
 	 * @param uriVariables the variables to expand in the template
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(String url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, ParameterizedTypeReference<T> responseType,
@@ -391,7 +391,7 @@ public interface AsyncRestOperations {
 
 	/**
 	 * Asynchronously execute the HTTP method to the given URI template, writing the given
-	 * request entity to the request, and returns the response as {@link ResponseEntity}.
+	 * request com.spring.entity to the request, and returns the response as {@link ResponseEntity}.
 	 * The given {@link ParameterizedTypeReference} is used to pass generic type
 	 * information:
 	 * <pre class="code">
@@ -403,10 +403,10 @@ public interface AsyncRestOperations {
 	 * </pre>
 	 * @param url the URL
 	 * @param method the HTTP method (GET, POST, etc)
-	 * @param requestEntity the entity (headers and/or body) to write to the request
+	 * @param requestEntity the com.spring.entity (headers and/or body) to write to the request
 	 * (may be {@code null})
 	 * @param responseType the type of the return value
-	 * @return the response as entity wrapped in a {@link Future}
+	 * @return the response as com.spring.entity wrapped in a {@link Future}
 	 */
 	<T> ListenableFuture<ResponseEntity<T>> exchange(URI url, HttpMethod method,
 			@Nullable HttpEntity<?> requestEntity, ParameterizedTypeReference<T> responseType)

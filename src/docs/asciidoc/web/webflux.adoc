@@ -2382,7 +2382,7 @@ container object that exposes request headers and the body. The following exampl
 [subs="verbatim,quotes"]
 ----
 	@PostMapping("/accounts")
-	public void handle(HttpEntity<Account> entity) {
+	public void handle(HttpEntity<Account> com.spring.entity) {
 		// ...
 	}
 ----

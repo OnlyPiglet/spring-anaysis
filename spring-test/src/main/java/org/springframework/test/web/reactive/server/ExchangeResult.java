@@ -44,7 +44,7 @@ import org.springframework.util.MultiValueMap;
  * <p>Note that a decoded response body is not exposed at this level since the
  * body may not have been decoded and consumed yet. Sub-types
  * {@link EntityExchangeResult} and {@link FluxExchangeResult} provide access
- * to a decoded response entity and a decoded (but not consumed) response body
+ * to a decoded response com.spring.entity and a decoded (but not consumed) response body
  * respectively.
  *
  * @author Rossen Stoyanchev

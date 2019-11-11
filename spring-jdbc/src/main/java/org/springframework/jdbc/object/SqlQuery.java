@@ -243,7 +243,7 @@ public abstract class SqlQuery<T> extends SqlOperation {
 
 	/**
 	 * Generic object finder method, used by all other {@code findObject} methods.
-	 * Object finder methods are like EJB entity bean finders, in that it is
+	 * Object finder methods are like EJB com.spring.entity bean finders, in that it is
 	 * considered an error if they return more than one result.
 	 * @return the result object, or {@code null} if not found. Subclasses may
 	 * choose to treat this as an error and throw an exception.

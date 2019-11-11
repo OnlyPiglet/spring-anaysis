@@ -161,11 +161,11 @@ public class LocalContainerEntityManagerFactoryBean extends AbstractEntityManage
 	}
 
 	/**
-	 * Set whether to use Spring-based scanning for entity classes in the classpath
+	 * Set whether to use Spring-based scanning for com.spring.entity classes in the classpath
 	 * instead of using JPA's standard scanning of jar files with {@code persistence.xml}
 	 * markers in them. In case of Spring-based scanning, no {@code persistence.xml}
 	 * is necessary; all you need to do is to specify base packages to search here.
-	 * <p>Default is none. Specify packages to search for autodetection of your entity
+	 * <p>Default is none. Specify packages to search for autodetection of your com.spring.entity
 	 * classes in the classpath. This is analogous to Spring's component-scan feature
 	 * ({@link org.springframework.context.annotation.ClassPathBeanDefinitionScanner}).
 	 * <p><b>Note: There may be limitations in comparison to regular JPA scanning.</b>
@@ -192,7 +192,7 @@ public class LocalContainerEntityManagerFactoryBean extends AbstractEntityManage
 	/**
 	 * Specify one or more mapping resources (equivalent to {@code <mapping-file>}
 	 * entries in {@code persistence.xml}) for the default persistence unit.
-	 * Can be used on its own or in combination with entity scanning in the classpath,
+	 * Can be used on its own or in combination with com.spring.entity scanning in the classpath,
 	 * in both cases avoiding {@code persistence.xml}.
 	 * <p>Note that mapping resources must be relative to the classpath root,
 	 * e.g. "META-INF/mappings.xml" or "com/mycompany/repository/mappings.xml",
@@ -278,7 +278,7 @@ public class LocalContainerEntityManagerFactoryBean extends AbstractEntityManage
 	/**
 	 * Set the PersistenceUnitPostProcessors to be applied to the
 	 * PersistenceUnitInfo used for creating this EntityManagerFactory.
-	 * <p>Such post-processors can, for example, register further entity
+	 * <p>Such post-processors can, for example, register further com.spring.entity
 	 * classes and jar files, in addition to the metadata read from
 	 * {@code persistence.xml}.
 	 * <p><b>NOTE: Only applied if no external PersistenceUnitManager specified.</b>
@@ -374,7 +374,7 @@ public class LocalContainerEntityManagerFactoryBean extends AbstractEntityManage
 	 * created by this bean.
 	 * <p>The default implementation reads in all persistence unit infos from
 	 * {@code persistence.xml}, as defined in the JPA specification.
-	 * If no entity manager name was specified, it takes the first info in the
+	 * If no com.spring.entity manager name was specified, it takes the first info in the
 	 * array as returned by the reader. Otherwise, it checks for a matching name.
 	 * @param persistenceUnitManager the PersistenceUnitManager to obtain from
 	 * @return the chosen PersistenceUnitInfo

@@ -39,7 +39,7 @@ public interface ClientHttpRequestInterceptor {
 	/**
 	 * Intercept the given request, and return a response. The given
 	 * {@link ClientHttpRequestExecution} allows the interceptor to pass on the
-	 * request and response to the next entity in the chain.
+	 * request and response to the next com.spring.entity in the chain.
 	 * <p>A typical implementation of this method would follow the following pattern:
 	 * <ol>
 	 * <li>Examine the {@linkplain HttpRequest request} and body</li>

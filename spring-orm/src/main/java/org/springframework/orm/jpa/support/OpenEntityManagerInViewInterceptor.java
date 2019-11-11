@@ -60,7 +60,7 @@ public class OpenEntityManagerInViewInterceptor extends EntityManagerFactoryAcce
 
 	/**
 	 * Suffix that gets appended to the EntityManagerFactory toString
-	 * representation for the "participate in existing entity manager
+	 * representation for the "participate in existing com.spring.entity manager
 	 * handling" request attribute.
 	 * @see #getParticipateAttributeName
 	 */

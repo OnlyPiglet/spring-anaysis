@@ -477,7 +477,7 @@ public interface WebClient {
 		 *     .flatMapMany(response -&gt; response.bodyToFlux(Person.class));
 		 * </pre>
 		 * <p><strong>NOTE:</strong> You must always use one of the body or
-		 * entity methods of the response to ensure resources are released.
+		 * com.spring.entity methods of the response to ensure resources are released.
 		 * See {@link ClientResponse} for more details.
 		 * @return a {@code Mono} for the response
 		 * @see #retrieve()

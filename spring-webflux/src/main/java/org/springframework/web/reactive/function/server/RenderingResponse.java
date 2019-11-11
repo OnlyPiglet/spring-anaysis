@@ -122,7 +122,7 @@ public interface RenderingResponse extends ServerResponse {
 		Builder header(String headerName, String... headerValues);
 
 		/**
-		 * Copy the given headers into the entity's headers map.
+		 * Copy the given headers into the com.spring.entity's headers map.
 		 * @param headers the existing HttpHeaders to copy from
 		 * @return this builder
 		 * @see HttpHeaders#add(String, String)

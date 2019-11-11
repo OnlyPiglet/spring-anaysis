@@ -25,16 +25,16 @@ import org.springframework.beans.factory.config.BeanReference;
  * and {@link BeanReference BeanReferences} as presented in some configuration context.
  *
  * <p>With the introduction of {@link org.springframework.beans.factory.xml.NamespaceHandler pluggable custom XML tags},
- * it is now possible for a single logical configuration entity, in this case an XML tag, to
+ * it is now possible for a single logical configuration com.spring.entity, in this case an XML tag, to
  * create multiple {@link BeanDefinition BeanDefinitions} and {@link BeanReference RuntimeBeanReferences}
  * in order to provide more succinct configuration and greater convenience to end users. As such, it can
- * no longer be assumed that each configuration entity (e.g. XML tag) maps to one {@link BeanDefinition}.
+ * no longer be assumed that each configuration com.spring.entity (e.g. XML tag) maps to one {@link BeanDefinition}.
  * For tool vendors and other users who wish to present visualization or support for configuring Spring
  * applications it is important that there is some mechanism in place to tie the {@link BeanDefinition BeanDefinitions}
  * in the {@link org.springframework.beans.factory.BeanFactory} back to the configuration data in a way
  * that has concrete meaning to the end user. As such, {@link org.springframework.beans.factory.xml.NamespaceHandler}
  * implementations are able to publish events in the form of a {@code ComponentDefinition} for each
- * logical entity being configured. Third parties can then {@link ReaderEventListener subscribe to these events},
+ * logical com.spring.entity being configured. Third parties can then {@link ReaderEventListener subscribe to these events},
  * allowing for a user-centric view of the bean metadata.
  *
  * <p>Each {@code ComponentDefinition} has a {@link #getSource source object} which is configuration-specific.
@@ -50,7 +50,7 @@ import org.springframework.beans.factory.config.BeanReference;
  * {@link #getBeanReferences}, tools may wish to inspect all {@link BeanDefinition BeanDefinitions} to gather
  * the full set of {@link BeanReference BeanReferences}. Implementations are required to provide
  * all {@link BeanReference BeanReferences} that are required to validate the configuration of the
- * overall logical entity as well as those required to provide full user visualisation of the configuration.
+ * overall logical com.spring.entity as well as those required to provide full user visualisation of the configuration.
  * It is expected that certain {@link BeanReference BeanReferences} will not be important to
  * validation or to the user view of the configuration and as such these may be omitted. A tool may wish to
  * display any additional {@link BeanReference BeanReferences} sourced through the supplied

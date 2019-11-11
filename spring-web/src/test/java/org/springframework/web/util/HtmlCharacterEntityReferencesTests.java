@@ -50,9 +50,9 @@ public class HtmlCharacterEntityReferencesTests {
 						HtmlCharacterEntityReferences.REFERENCE_END;
 				assertTrue("The unicode character " + character + " should be mapped to a reference",
 						entityReferences.isMappedToReference((char) character));
-				assertEquals("The reference of unicode character " + character + " should be entity " + referenceName,
+				assertEquals("The reference of unicode character " + character + " should be com.spring.entity " + referenceName,
 						fullReference, entityReferences.convertToReference((char) character));
-				assertEquals("The entity reference [" + referenceName + "] should be mapped to unicode character " +
+				assertEquals("The com.spring.entity reference [" + referenceName + "] should be mapped to unicode character " +
 						character, (char) character, entityReferences.convertToCharacter(referenceName));
 			}
 			else if (character == 39) {
@@ -62,17 +62,17 @@ public class HtmlCharacterEntityReferencesTests {
 			else {
 				assertFalse("The unicode character " + character + " should not be mapped to a reference",
 						entityReferences.isMappedToReference((char) character));
-				assertNull("No entity reference of unicode character " + character + " should exist",
+				assertNull("No com.spring.entity reference of unicode character " + character + " should exist",
 						entityReferences.convertToReference((char) character));
 			}
 		}
 
-		assertEquals("The registered entity count of entityReferences should match the number of entity references",
+		assertEquals("The registered com.spring.entity count of entityReferences should match the number of com.spring.entity references",
 				referenceCharactersMap.size() + 1, entityReferences.getSupportedReferenceCount());
-		assertEquals("The HTML 4.0 Standard defines 252+1 entity references so do entityReferences",
+		assertEquals("The HTML 4.0 Standard defines 252+1 com.spring.entity references so do entityReferences",
 				252 + 1, entityReferences.getSupportedReferenceCount());
 
-		assertEquals("Invalid entity reference names should not be convertible",
+		assertEquals("Invalid com.spring.entity reference names should not be convertible",
 				(char) -1, entityReferences.convertToCharacter("invalid"));
 	}
 

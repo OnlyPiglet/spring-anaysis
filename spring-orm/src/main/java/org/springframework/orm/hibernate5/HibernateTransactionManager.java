@@ -88,7 +88,7 @@ import org.springframework.util.Assert;
  * <p>This transaction manager supports nested transactions via JDBC 3.0 Savepoints.
  * The {@link #setNestedTransactionAllowed} "nestedTransactionAllowed"} flag defaults
  * to "false", though, as nested transactions will just apply to the JDBC Connection,
- * not to the Hibernate Session and its cached entity objects and related context.
+ * not to the Hibernate Session and its cached com.spring.entity objects and related context.
  * You can manually set the flag to "true" if you want to use nested transactions
  * for JDBC access code which participates in Hibernate transactions (provided that
  * your JDBC driver supports Savepoints). <i>Note that Hibernate itself does not
@@ -300,7 +300,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 	}
 
 	/**
-	 * Set the bean name of a Hibernate entity interceptor that allows to inspect
+	 * Set the bean name of a Hibernate com.spring.entity interceptor that allows to inspect
 	 * and change property values before writing to and reading from the database.
 	 * Will get applied to any new Session created by this transaction manager.
 	 * <p>Requires the bean factory to be known, to be able to resolve the bean
@@ -308,7 +308,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 	 * prototype interceptors, i.e. a new interceptor instance per session.
 	 * <p>Can also be used for shared interceptor instances, but it is recommended
 	 * to set the interceptor reference directly in such a scenario.
-	 * @param entityInterceptorBeanName the name of the entity interceptor in
+	 * @param entityInterceptorBeanName the name of the com.spring.entity interceptor in
 	 * the bean factory
 	 * @see #setBeanFactory
 	 * @see #setEntityInterceptor
@@ -318,7 +318,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 	}
 
 	/**
-	 * Set a Hibernate entity interceptor that allows to inspect and change
+	 * Set a Hibernate com.spring.entity interceptor that allows to inspect and change
 	 * property values before writing to and reading from the database.
 	 * Will get applied to any new Session created by this transaction manager.
 	 * <p>Such an interceptor can either be set at the SessionFactory level,
@@ -331,8 +331,8 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 	}
 
 	/**
-	 * Return the current Hibernate entity interceptor, or {@code null} if none.
-	 * Resolves an entity interceptor bean name via the bean factory,
+	 * Return the current Hibernate com.spring.entity interceptor, or {@code null} if none.
+	 * Resolves an com.spring.entity interceptor bean name via the bean factory,
 	 * if necessary.
 	 * @throws IllegalStateException if bean name specified but no bean factory set
 	 * @throws BeansException if bean name resolution via the bean factory failed
@@ -347,7 +347,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 		}
 		else if (this.entityInterceptor instanceof String) {
 			if (this.beanFactory == null) {
-				throw new IllegalStateException("Cannot get entity interceptor via bean name if no bean factory set");
+				throw new IllegalStateException("Cannot get com.spring.entity interceptor via bean name if no bean factory set");
 			}
 			String beanName = (String) this.entityInterceptor;
 			return this.beanFactory.getBean(beanName, Interceptor.class);
@@ -358,7 +358,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 	}
 
 	/**
-	 * The bean factory just needs to be known for resolving entity interceptor
+	 * The bean factory just needs to be known for resolving com.spring.entity interceptor
 	 * bean names. It does not need to be set for any other mode of operation.
 	 * @see #setEntityInterceptorBeanName
 	 */
@@ -506,7 +506,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 			if (definition.isReadOnly() && txObject.isNewSession()) {
 				// Just set to MANUAL in case of a new Session for this transaction.
 				session.setFlushMode(FlushMode.MANUAL);
-				// As of 5.1, we're also setting Hibernate's read-only entity mode by default.
+				// As of 5.1, we're also setting Hibernate's read-only com.spring.entity mode by default.
 				session.setDefaultReadOnly(true);
 			}
 
@@ -743,7 +743,7 @@ public class HibernateTransactionManager extends AbstractPlatformTransactionMana
 
 	/**
 	 * Disconnect a pre-existing Hibernate Session on transaction completion,
-	 * returning its database connection but preserving its entity state.
+	 * returning its database connection but preserving its com.spring.entity state.
 	 * <p>The default implementation simply calls {@link Session#disconnect()}.
 	 * Subclasses may override this with a no-op or with fine-tuned disconnection logic.
 	 * @param session the Hibernate Session to disconnect

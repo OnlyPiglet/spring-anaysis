@@ -170,7 +170,7 @@
 			<description>Specifies the list of character encodings for input data that is accepted
 			by the server processing this form. The value is a space- and/or comma-delimited list of
 			charset values. The client must interpret this list as an exclusive-or list, i.e. the
-			server is able to accept any single character encoding per entity received.</description>
+			server is able to accept any single character encoding per com.spring.entity received.</description>
 			<name>acceptCharset</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>

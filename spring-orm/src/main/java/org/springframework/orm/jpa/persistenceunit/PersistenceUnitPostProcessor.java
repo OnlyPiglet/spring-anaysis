@@ -30,7 +30,7 @@ public interface PersistenceUnitPostProcessor {
 
 	/**
 	 * Post-process the given PersistenceUnitInfo, for example registering
-	 * further entity classes and jar files.
+	 * further com.spring.entity classes and jar files.
 	 * @param pui the chosen PersistenceUnitInfo, as read from {@code persistence.xml}.
 	 * Passed in as MutablePersistenceUnitInfo.
 	 */

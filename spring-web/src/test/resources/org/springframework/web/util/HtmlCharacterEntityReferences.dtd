@@ -1,4 +1,4 @@
-<!-- File containing all character entity references defined
+<!-- File containing all character com.spring.entity references defined
      by the HTML 4.0 standard. -->
 <!-- Valuable information and a complete description of the
      HTML 4.0 character set can be found at
@@ -9,7 +9,7 @@
      conforming SGML systems and applications as defined in
      ISO 8879, provided this notice is included in all copies.
 -->
-<!-- Character entity set. Typical invocation:
+<!-- Character com.spring.entity set. Typical invocation:
      <!ENTITY % HTMLlat1 PUBLIC
        "-//W3C//ENTITIES Latin 1//EN//HTML">
      %HTMLlat1; -->
@@ -201,7 +201,7 @@
                                   
                                   <!-- Mathematical, Greek and Symbolic characters for HTML -->
 
-<!-- Character entity set. Typical invocation:
+<!-- Character com.spring.entity set. Typical invocation:
      <!ENTITY % HTMLsymbol PUBLIC
        "-//W3C//ENTITIES Symbols//EN//HTML">
      %HTMLsymbol; -->
@@ -212,9 +212,9 @@
      ISO 8879, provided this notice is included in all copies.
 -->
 
-<!-- Relevant ISO entity set is given unless names are newly introduced.
+<!-- Relevant ISO com.spring.entity set is given unless names are newly introduced.
      New names (i.e., not in ISO 8879 list) do not clash with any
-     existing ISO 8879 entity names. ISO 10646 character numbers
+     existing ISO 8879 com.spring.entity names. ISO 10646 character numbers
      are given for each character, in hex. CDATA values are decimal
      conversions of the ISO 10646 values and refer to the document
      character set. Names are ISO 10646 names. 
@@ -444,7 +444,7 @@
 
 <!-- Special characters for HTML -->
 
-<!-- Character entity set. Typical invocation:
+<!-- Character com.spring.entity set. Typical invocation:
      <!ENTITY % HTMLspecial PUBLIC
        "-//W3C//ENTITIES Special//EN//HTML">
      %HTMLspecial; -->
@@ -455,9 +455,9 @@
      ISO 8879, provided this notice is included in all copies.
 -->
 
-<!-- Relevant ISO entity set is given unless names are newly introduced.
+<!-- Relevant ISO com.spring.entity set is given unless names are newly introduced.
      New names (i.e., not in ISO 8879 list) do not clash with any
-     existing ISO 8879 entity names. ISO 10646 character numbers
+     existing ISO 8879 com.spring.entity names. ISO 10646 character numbers
      are given for each character, in hex. CDATA values are decimal
      conversions of the ISO 10646 values and refer to the document
      character set. Names are ISO 10646 names. 

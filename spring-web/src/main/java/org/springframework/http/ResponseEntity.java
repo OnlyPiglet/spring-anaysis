@@ -37,10 +37,10 @@ import org.springframework.util.ObjectUtils;
  * {@link org.springframework.web.client.RestTemplate#getForEntity getForEntity()} and
  * {@link org.springframework.web.client.RestTemplate#exchange exchange()}:
  * <pre class="code">
- * ResponseEntity&lt;String&gt; entity = template.getForEntity("https://example.com", String.class);
- * String body = entity.getBody();
- * MediaType contentType = entity.getHeaders().getContentType();
- * HttpStatus statusCode = entity.getStatusCode();
+ * ResponseEntity&lt;String&gt; com.spring.entity = template.getForEntity("https://example.com", String.class);
+ * String body = com.spring.entity.getBody();
+ * MediaType contentType = com.spring.entity.getHeaders().getContentType();
+ * HttpStatus statusCode = com.spring.entity.getStatusCode();
  * </pre>
  *
  * <p>Can also be used in Spring MVC, as the return value from a @Controller method:
@@ -85,7 +85,7 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 
 	/**
 	 * Create a new {@code ResponseEntity} with the given body and status code, and no headers.
-	 * @param body the entity body
+	 * @param body the com.spring.entity body
 	 * @param status the status code
 	 */
 	public ResponseEntity(@Nullable T body, HttpStatus status) {
@@ -94,7 +94,7 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 
 	/**
 	 * Create a new {@code HttpEntity} with the given headers and status code, and no body.
-	 * @param headers the entity headers
+	 * @param headers the com.spring.entity headers
 	 * @param status the status code
 	 */
 	public ResponseEntity(MultiValueMap<String, String> headers, HttpStatus status) {
@@ -103,8 +103,8 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 
 	/**
 	 * Create a new {@code HttpEntity} with the given body, headers, and status code.
-	 * @param body the entity body
-	 * @param headers the entity headers
+	 * @param body the com.spring.entity body
+	 * @param headers the com.spring.entity headers
 	 * @param status the status code
 	 */
 	public ResponseEntity(@Nullable T body, @Nullable MultiValueMap<String, String> headers, HttpStatus status) {
@@ -116,8 +116,8 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 	/**
 	 * Create a new {@code HttpEntity} with the given body, headers, and status code.
 	 * Just used behind the nested builder API.
-	 * @param body the entity body
-	 * @param headers the entity headers
+	 * @param body the com.spring.entity body
+	 * @param headers the com.spring.entity headers
 	 * @param status the status code (as {@code HttpStatus} or as {@code Integer} value)
 	 */
 	private ResponseEntity(@Nullable T body, @Nullable MultiValueMap<String, String> headers, Object status) {
@@ -309,7 +309,7 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 
 
 	/**
-	 * Defines a builder that adds headers to the response entity.
+	 * Defines a builder that adds headers to the response com.spring.entity.
 	 * @since 4.1
 	 * @param <B> the builder subclass
 	 */
@@ -325,7 +325,7 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 		B header(String headerName, String... headerValues);
 
 		/**
-		 * Copy the given headers into the entity's headers map.
+		 * Copy the given headers into the com.spring.entity's headers map.
 		 * @param headers the existing HttpHeaders to copy from
 		 * @return this builder
 		 * @since 4.1.2
@@ -343,8 +343,8 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 		B allow(HttpMethod... allowedMethods);
 
 		/**
-		 * Set the entity tag of the body, as specified by the {@code ETag} header.
-		 * @param etag the new entity tag
+		 * Set the com.spring.entity tag of the body, as specified by the {@code ETag} header.
+		 * @param etag the new com.spring.entity tag
 		 * @return this builder
 		 * @see HttpHeaders#setETag(String)
 		 */
@@ -413,8 +413,8 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 		B varyBy(String... requestHeaders);
 
 		/**
-		 * Build the response entity with no body.
-		 * @return the response entity
+		 * Build the response com.spring.entity with no body.
+		 * @return the response com.spring.entity
 		 * @see BodyBuilder#body(Object)
 		 */
 		<T> ResponseEntity<T> build();
@@ -422,7 +422,7 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 
 
 	/**
-	 * Defines a builder that adds a body to the response entity.
+	 * Defines a builder that adds a body to the response com.spring.entity.
 	 * @since 4.1
 	 */
 	public interface BodyBuilder extends HeadersBuilder<BodyBuilder> {
@@ -446,10 +446,10 @@ public class ResponseEntity<T> extends HttpEntity<T> {
 		BodyBuilder contentType(MediaType contentType);
 
 		/**
-		 * Set the body of the response entity and returns it.
+		 * Set the body of the response com.spring.entity and returns it.
 		 * @param <T> the type of the body
-		 * @param body the body of the response entity
-		 * @return the built response entity
+		 * @param body the body of the response com.spring.entity
+		 * @return the built response com.spring.entity
 		 */
 		<T> ResponseEntity<T> body(@Nullable T body);
 	}

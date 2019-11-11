@@ -55,7 +55,7 @@ public class BeansDtdResolver implements EntityResolver {
 	@Nullable
 	public InputSource resolveEntity(@Nullable String publicId, @Nullable String systemId) throws IOException {
 		if (logger.isTraceEnabled()) {
-			logger.trace("Trying to resolve XML entity with public ID [" + publicId +
+			logger.trace("Trying to resolve XML com.spring.entity with public ID [" + publicId +
 					"] and system ID [" + systemId + "]");
 		}
 

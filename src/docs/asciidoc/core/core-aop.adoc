@@ -1088,7 +1088,7 @@ behavior of `proceed` for around advice compiled by the AspectJ compiler. For ar
 advice written using the traditional AspectJ language, the number of arguments passed to
 `proceed` must match the number of arguments passed to the around advice (not the number
 of arguments taken by the underlying join point), and the value passed to proceed in a
-given argument position supplants the original value at the join point for the entity
+given argument position supplants the original value at the join point for the com.spring.entity
 the value was bound to (do not worry if this does not make sense right now). The approach
 taken by Spring is simpler and a better match to its proxy-based, execution-only
 semantics. You only need to be aware of this difference if you compile @AspectJ

@@ -20,7 +20,7 @@ import org.springframework.core.style.ToStringCreator;
 
 /**
  * Concrete subclass of {@link PersistentEntity} representing a <em>person</em>
- * entity; intended for use in unit tests.
+ * com.spring.entity; intended for use in unit tests.
  *
  * @author Sam Brannen
  * @since 2.5

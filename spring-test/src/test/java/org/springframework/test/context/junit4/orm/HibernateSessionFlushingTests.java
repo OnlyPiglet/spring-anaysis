@@ -79,7 +79,7 @@ public class HibernateSessionFlushingTests extends AbstractTransactionalJUnit4Sp
 	public void findSamWithReadOnlySession() {
 		Person sam = personService.findByName(SAM);
 		sam.setName("Vlad");
-		// By setting setDefaultReadOnly(true), the user can no longer modify any entity...
+		// By setting setDefaultReadOnly(true), the user can no longer modify any com.spring.entity...
 		Session session = sessionFactory.getCurrentSession();
 		session.flush();
 		session.refresh(sam);

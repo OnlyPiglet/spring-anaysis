@@ -165,7 +165,7 @@ public class HttpEntityMethodProcessorMockTests {
 		assertTrue("HttpEntity parameter not supported", processor.supportsParameter(paramHttpEntity));
 		assertTrue("RequestEntity parameter not supported", processor.supportsParameter(paramRequestEntity));
 		assertFalse("ResponseEntity parameter supported", processor.supportsParameter(paramResponseEntity));
-		assertFalse("non-entity parameter supported", processor.supportsParameter(paramInt));
+		assertFalse("non-com.spring.entity parameter supported", processor.supportsParameter(paramInt));
 	}
 
 	@Test

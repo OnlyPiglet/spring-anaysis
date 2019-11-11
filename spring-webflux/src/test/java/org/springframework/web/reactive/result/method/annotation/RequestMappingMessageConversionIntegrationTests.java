@@ -181,7 +181,7 @@ public class RequestMappingMessageConversionIntegrationTests extends AbstractReq
 	@Test
 	public void personResponseBodyWithMonoResponseEntity() throws Exception {
 		Person expected = new Person("Robert");
-		ResponseEntity<Person> entity = performGet("/person-response/mono-response-entity", JSON, Person.class);
+		ResponseEntity<Person> entity = performGet("/person-response/mono-response-com.spring.entity", JSON, Person.class);
 		assertEquals(17, entity.getHeaders().getContentLength());
 		assertEquals(expected, entity.getBody());
 	}
@@ -189,7 +189,7 @@ public class RequestMappingMessageConversionIntegrationTests extends AbstractReq
 	@Test // SPR-16172
 	public void personResponseBodyWithMonoResponseEntityXml() throws Exception {
 
-		String url = "/person-response/mono-response-entity-xml";
+		String url = "/person-response/mono-response-com.spring.entity-xml";
 		ResponseEntity<String> entity = performGet(url, new HttpHeaders(), String.class);
 		String actual = entity.getBody();
 
@@ -523,13 +523,13 @@ public class RequestMappingMessageConversionIntegrationTests extends AbstractReq
 			return Single.just(new Person("Robert"));
 		}
 
-		@GetMapping("/mono-response-entity")
+		@GetMapping("/mono-response-com.spring.entity")
 		public ResponseEntity<Mono<Person>> getMonoResponseEntity() {
 			Mono<Person> body = Mono.just(new Person("Robert"));
 			return ResponseEntity.ok(body);
 		}
 
-		@GetMapping("/mono-response-entity-xml")
+		@GetMapping("/mono-response-com.spring.entity-xml")
 		public ResponseEntity<Mono<Person>> getMonoResponseEntityXml() {
 			Mono<Person> body = Mono.just(new Person("Robert"));
 			return ResponseEntity.ok().contentType(MediaType.APPLICATION_XML).body(body);

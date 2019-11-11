@@ -97,7 +97,7 @@ public interface HibernateOperations {
 	//-------------------------------------------------------------------------
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, or {@code null} if not found.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#get(Class, Serializable)} for convenience.
@@ -113,7 +113,7 @@ public interface HibernateOperations {
 	<T> T get(Class<T> entityClass, Serializable id) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, or {@code null} if not found.
 	 * <p>Obtains the specified lock mode if the instance exists.
 	 * <p>This method is a thin wrapper around
@@ -131,13 +131,13 @@ public interface HibernateOperations {
 	<T> T get(Class<T> entityClass, Serializable id, LockMode lockMode) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, or {@code null} if not found.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#get(String, Serializable)} for convenience.
 	 * For an explanation of the exact semantics of this method, please do refer to
 	 * the Hibernate API documentation in the first instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param id the identifier of the persistent instance
 	 * @return the persistent instance, or {@code null} if not found
 	 * @throws DataAccessException in case of Hibernate errors
@@ -147,14 +147,14 @@ public interface HibernateOperations {
 	Object get(String entityName, Serializable id) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, or {@code null} if not found.
 	 * Obtains the specified lock mode if the instance exists.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#get(String, Serializable, LockMode)} for convenience.
 	 * For an explanation of the exact semantics of this method, please do refer to
 	 * the Hibernate API documentation in the first instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param id the identifier of the persistent instance
 	 * @param lockMode the lock mode to obtain
 	 * @return the persistent instance, or {@code null} if not found
@@ -165,7 +165,7 @@ public interface HibernateOperations {
 	Object get(String entityName, Serializable id, LockMode lockMode) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, throwing an exception if not found.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#load(Class, Serializable)} for convenience.
@@ -181,7 +181,7 @@ public interface HibernateOperations {
 	<T> T load(Class<T> entityClass, Serializable id) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, throwing an exception if not found.
 	 * Obtains the specified lock mode if the instance exists.
 	 * <p>This method is a thin wrapper around
@@ -199,13 +199,13 @@ public interface HibernateOperations {
 	<T> T load(Class<T> entityClass, Serializable id, LockMode lockMode) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, throwing an exception if not found.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#load(String, Serializable)} for convenience.
 	 * For an explanation of the exact semantics of this method, please do refer to
 	 * the Hibernate API documentation in the first instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param id the identifier of the persistent instance
 	 * @return the persistent instance
 	 * @throws org.springframework.orm.ObjectRetrievalFailureException if not found
@@ -215,14 +215,14 @@ public interface HibernateOperations {
 	Object load(String entityName, Serializable id) throws DataAccessException;
 
 	/**
-	 * Return the persistent instance of the given entity class
+	 * Return the persistent instance of the given com.spring.entity class
 	 * with the given identifier, throwing an exception if not found.
 	 * <p>Obtains the specified lock mode if the instance exists.
 	 * <p>This method is a thin wrapper around
 	 * {@link org.hibernate.Session#load(String, Serializable, LockMode)} for convenience.
 	 * For an explanation of the exact semantics of this method, please do refer to
 	 * the Hibernate API documentation in the first instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param id the identifier of the persistent instance
 	 * @param lockMode the lock mode to obtain
 	 * @return the persistent instance
@@ -233,7 +233,7 @@ public interface HibernateOperations {
 	Object load(String entityName, Serializable id, LockMode lockMode) throws DataAccessException;
 
 	/**
-	 * Return all persistent instances of the given entity class.
+	 * Return all persistent instances of the given com.spring.entity class.
 	 * Note: Use queries or criteria for retrieving a specific subset.
 	 * @param entityClass a persistent class
 	 * @return a {@link List} containing 0 or more persistent instances
@@ -331,7 +331,7 @@ public interface HibernateOperations {
 	/**
 	 * Obtain the specified lock level upon the given object, implicitly
 	 * checking whether the corresponding database entry still exists.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to lock
 	 * @param lockMode the lock mode to obtain
 	 * @throws org.springframework.orm.ObjectOptimisticLockingFailureException if not found
@@ -351,7 +351,7 @@ public interface HibernateOperations {
 
 	/**
 	 * Persist the given transient instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the transient instance to persist
 	 * @return the generated identifier
 	 * @throws DataAccessException in case of Hibernate errors
@@ -384,7 +384,7 @@ public interface HibernateOperations {
 	/**
 	 * Update the given persistent instance,
 	 * associating it with the current Hibernate {@link org.hibernate.Session}.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to update
 	 * @throws DataAccessException in case of Hibernate errors
 	 * @see org.hibernate.Session#update(String, Object)
@@ -396,7 +396,7 @@ public interface HibernateOperations {
 	 * associating it with the current Hibernate {@link org.hibernate.Session}.
 	 * <p>Obtains the specified lock mode if the instance exists, implicitly
 	 * checking whether the corresponding database entry still exists.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to update
 	 * @param lockMode the lock mode to obtain
 	 * @throws org.springframework.orm.ObjectOptimisticLockingFailureException if not found
@@ -420,7 +420,7 @@ public interface HibernateOperations {
 	 * Save or update the given persistent instance,
 	 * according to its id (matching the configured "unsaved-value"?).
 	 * Associates the instance with the current Hibernate {@code Session}.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to save or update
 	 * (to be associated with the Hibernate {@code Session})
 	 * @throws DataAccessException in case of Hibernate errors
@@ -441,7 +441,7 @@ public interface HibernateOperations {
 	/**
 	 * Persist the state of the given detached instance according to the
 	 * given replication mode, reusing the current identifier value.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent object to replicate
 	 * @param replicationMode the Hibernate ReplicationMode
 	 * @throws DataAccessException in case of Hibernate errors
@@ -464,7 +464,7 @@ public interface HibernateOperations {
 	 * Persist the given transient instance. Follows JSR-220 semantics.
 	 * <p>Similar to {@code save}, associating the given object
 	 * with the current Hibernate {@link org.hibernate.Session}.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to persist
 	 * @throws DataAccessException in case of Hibernate errors
 	 * @see org.hibernate.Session#persist(String, Object)
@@ -476,7 +476,7 @@ public interface HibernateOperations {
 	 * Copy the state of the given object onto the persistent object
 	 * with the same identifier. Follows JSR-220 semantics.
 	 * <p>Similar to {@code saveOrUpdate}, but never associates the given
-	 * object with the current Hibernate Session. In case of a new entity,
+	 * object with the current Hibernate Session. In case of a new com.spring.entity,
 	 * the state will be copied over as well.
 	 * <p>Note that {@code merge} will <i>not</i> update the identifiers
 	 * in the passed-in object graph (in contrast to TopLink)! Consider
@@ -496,13 +496,13 @@ public interface HibernateOperations {
 	 * with the same identifier. Follows JSR-220 semantics.
 	 * <p>Similar to {@code saveOrUpdate}, but never associates the given
 	 * object with the current Hibernate {@link org.hibernate.Session}. In
-	 * the case of a new entity, the state will be copied over as well.
+	 * the case of a new com.spring.entity, the state will be copied over as well.
 	 * <p>Note that {@code merge} will <i>not</i> update the identifiers
 	 * in the passed-in object graph (in contrast to TopLink)! Consider
 	 * registering Spring's {@code IdTransferringMergeEventListener}
 	 * if you would like to have newly assigned ids transferred to the
 	 * original object graph too.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the object to merge with the corresponding persistence instance
 	 * @return the updated, registered persistent instance
 	 * @throws DataAccessException in case of Hibernate errors
@@ -533,7 +533,7 @@ public interface HibernateOperations {
 
 	/**
 	 * Delete the given persistent instance.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to delete
 	 * @throws DataAccessException in case of Hibernate errors
 	 * @see org.hibernate.Session#delete(Object)
@@ -544,7 +544,7 @@ public interface HibernateOperations {
 	 * Delete the given persistent instance.
 	 * <p>Obtains the specified lock mode if the instance exists, implicitly
 	 * checking whether the corresponding database entry still exists.
-	 * @param entityName the name of the persistent entity
+	 * @param entityName the name of the persistent com.spring.entity
 	 * @param entity the persistent instance to delete
 	 * @param lockMode the lock mode to obtain
 	 * @throws org.springframework.orm.ObjectOptimisticLockingFailureException if not found
@@ -616,8 +616,8 @@ public interface HibernateOperations {
 	List<?> findByCriteria(DetachedCriteria criteria, int firstResult, int maxResults) throws DataAccessException;
 
 	/**
-	 * Execute a query based on the given example entity object.
-	 * @param exampleEntity an instance of the desired entity,
+	 * Execute a query based on the given example com.spring.entity object.
+	 * @param exampleEntity an instance of the desired com.spring.entity,
 	 * serving as example for "query-by-example"
 	 * @return a {@link List} containing 0 or more persistent instances
 	 * @throws DataAccessException in case of Hibernate errors
@@ -626,9 +626,9 @@ public interface HibernateOperations {
 	<T> List<T> findByExample(T exampleEntity) throws DataAccessException;
 
 	/**
-	 * Execute a query based on the given example entity object.
-	 * @param entityName the name of the persistent entity
-	 * @param exampleEntity an instance of the desired entity,
+	 * Execute a query based on the given example com.spring.entity object.
+	 * @param entityName the name of the persistent com.spring.entity
+	 * @param exampleEntity an instance of the desired com.spring.entity,
 	 * serving as example for "query-by-example"
 	 * @return a {@link List} containing 0 or more persistent instances
 	 * @throws DataAccessException in case of Hibernate errors
@@ -637,8 +637,8 @@ public interface HibernateOperations {
 	<T> List<T> findByExample(String entityName, T exampleEntity) throws DataAccessException;
 
 	/**
-	 * Execute a query based on a given example entity object.
-	 * @param exampleEntity an instance of the desired entity,
+	 * Execute a query based on a given example com.spring.entity object.
+	 * @param exampleEntity an instance of the desired com.spring.entity,
 	 * serving as example for "query-by-example"
 	 * @param firstResult the index of the first result object to be retrieved
 	 * (numbered from 0)
@@ -653,9 +653,9 @@ public interface HibernateOperations {
 	<T> List<T> findByExample(T exampleEntity, int firstResult, int maxResults) throws DataAccessException;
 
 	/**
-	 * Execute a query based on a given example entity object.
-	 * @param entityName the name of the persistent entity
-	 * @param exampleEntity an instance of the desired entity,
+	 * Execute a query based on a given example com.spring.entity object.
+	 * @param entityName the name of the persistent com.spring.entity
+	 * @param exampleEntity an instance of the desired com.spring.entity,
 	 * serving as example for "query-by-example"
 	 * @param firstResult the index of the first result object to be retrieved
 	 * (numbered from 0)

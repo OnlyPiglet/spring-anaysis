@@ -59,7 +59,7 @@ import org.springframework.util.CollectionUtils;
  * for a single JPA {@link javax.persistence.EntityManagerFactory}. Binds a JPA
  * EntityManager from the specified factory to the thread, potentially allowing for
  * one thread-bound EntityManager per factory. {@link SharedEntityManagerCreator} and
- * {@code @PersistenceContext} are aware of thread-bound entity managers and participate
+ * {@code @PersistenceContext} are aware of thread-bound com.spring.entity managers and participate
  * in such transactions automatically. Using either is required for JPA access code
  * supporting this transaction management mechanism.
  *
@@ -91,7 +91,7 @@ import org.springframework.util.CollectionUtils;
  * <p>This transaction manager supports nested transactions via JDBC 3.0 Savepoints.
  * The {@link #setNestedTransactionAllowed "nestedTransactionAllowed"} flag defaults
  * to {@code false} though, since nested transactions will just apply to the JDBC
- * Connection, not to the JPA EntityManager and its cached entity objects and related
+ * Connection, not to the JPA EntityManager and its cached com.spring.entity objects and related
  * context. You can manually set the flag to {@code true} if you want to use nested
  * transactions for JDBC access code which participates in JPA transactions (provided
  * that your JDBC driver supports Savepoints). <i>Note that JPA itself does not support
@@ -429,7 +429,7 @@ public class JpaTransactionManager extends AbstractPlatformTransactionManager
 				}
 			}
 
-			// Bind the entity manager holder to the thread.
+			// Bind the com.spring.entity manager holder to the thread.
 			if (txObject.isNewEntityManagerHolder()) {
 				TransactionSynchronizationManager.bindResource(
 						obtainEntityManagerFactory(), txObject.getEntityManagerHolder());
@@ -585,7 +585,7 @@ public class JpaTransactionManager extends AbstractPlatformTransactionManager
 	protected void doCleanupAfterCompletion(Object transaction) {
 		JpaTransactionObject txObject = (JpaTransactionObject) transaction;
 
-		// Remove the entity manager holder from the thread, if still there.
+		// Remove the com.spring.entity manager holder from the thread, if still there.
 		// (Could have been removed by EntityManagerFactoryUtils in order
 		// to replace it with an unsynchronized EntityManager).
 		if (txObject.isNewEntityManagerHolder()) {
@@ -611,7 +611,7 @@ public class JpaTransactionManager extends AbstractPlatformTransactionManager
 
 		getJpaDialect().cleanupTransaction(txObject.getTransactionData());
 
-		// Remove the entity manager holder from the thread.
+		// Remove the com.spring.entity manager holder from the thread.
 		if (txObject.isNewEntityManagerHolder()) {
 			EntityManager em = txObject.getEntityManagerHolder().getEntityManager();
 			if (logger.isDebugEnabled()) {

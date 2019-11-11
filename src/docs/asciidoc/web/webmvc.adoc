@@ -2713,7 +2713,7 @@ container object that exposes request headers and body. The following listing sh
 [subs="verbatim,quotes"]
 ----
 	@PostMapping("/accounts")
-	public void handle(HttpEntity<Account> entity) {
+	public void handle(HttpEntity<Account> com.spring.entity) {
 		// ...
 	}
 ----

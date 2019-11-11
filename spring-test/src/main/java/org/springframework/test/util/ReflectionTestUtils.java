@@ -42,7 +42,7 @@ import org.springframework.util.StringUtils;
  * <ul>
  * <li>ORM frameworks such as JPA and Hibernate which condone the usage of
  * {@code private} or {@code protected} field access as opposed to
- * {@code public} setter methods for properties in a domain entity.</li>
+ * {@code public} setter methods for properties in a domain com.spring.entity.</li>
  * <li>Spring's support for annotations such as
  * {@link org.springframework.beans.factory.annotation.Autowired @Autowired},
  * {@link javax.inject.Inject @Inject}, and

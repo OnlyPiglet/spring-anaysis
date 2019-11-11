@@ -86,7 +86,7 @@ import org.springframework.util.ErrorHandler;
  * <p>There are two solutions to the duplicate message processing problem:
  * <ul>
  * <li>Either add <i>duplicate message detection</i> to your listener, in the
- * form of a business entity existence check or a protocol table check. This
+ * form of a business com.spring.entity existence check or a protocol table check. This
  * usually just needs to be done in case of the JMSRedelivered flag being
  * set on the incoming message (otherwise just process straightforwardly).
  * Note that with "sessionTransacted" set to "true", duplicate messages will

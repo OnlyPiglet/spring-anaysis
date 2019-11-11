@@ -37,9 +37,9 @@ public interface HandlerFilterFunction<T extends ServerResponse, R extends Serve
 
 	/**
 	 * Apply this filter to the given handler function. The given
-	 * {@linkplain HandlerFunction handler function} represents the next entity in the chain,
+	 * {@linkplain HandlerFunction handler function} represents the next com.spring.entity in the chain,
 	 * and can be {@linkplain HandlerFunction#handle(ServerRequest) invoked} in order to
-	 * proceed to this entity, or not invoked to block the chain.
+	 * proceed to this com.spring.entity, or not invoked to block the chain.
 	 * @param request the request
 	 * @param next the next handler or filter function in the chain
 	 * @return the filtered response

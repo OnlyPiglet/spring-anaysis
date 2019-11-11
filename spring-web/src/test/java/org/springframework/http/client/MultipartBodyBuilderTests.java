@@ -52,7 +52,7 @@ public class MultipartBodyBuilderTests {
 		HttpHeaders entityHeaders = new HttpHeaders();
 		entityHeaders.add("foo", "bar");
 		HttpEntity<String> entity = new HttpEntity<>("body", entityHeaders);
-		builder.part("entity", entity).header("baz", "qux");
+		builder.part("com.spring.entity", entity).header("baz", "qux");
 
 		Publisher<String> publisher = Flux.just("foo", "bar", "baz");
 		builder.asyncPart("publisherClass", publisher, String.class).header("baz", "qux");
@@ -71,7 +71,7 @@ public class MultipartBodyBuilderTests {
 		assertEquals(logo, resultEntity.getBody());
 		assertEquals("qux", resultEntity.getHeaders().getFirst("baz"));
 
-		resultEntity = result.getFirst("entity");
+		resultEntity = result.getFirst("com.spring.entity");
 		assertNotNull(resultEntity);
 		assertEquals("body", resultEntity.getBody());
 		assertEquals("bar", resultEntity.getHeaders().getFirst("foo"));

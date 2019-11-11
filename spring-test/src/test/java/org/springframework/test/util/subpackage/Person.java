@@ -17,7 +17,7 @@
 package org.springframework.test.util.subpackage;
 
 /**
- * Interface representing a <em>person</em> entity; intended for use in unit tests.
+ * Interface representing a <em>person</em> com.spring.entity; intended for use in unit tests.
  *
  * <p>The introduction of an interface is necessary in order to test support for
  * JDK dynamic proxies.

@@ -120,7 +120,7 @@ public class HtmlUtilsTests {
 		assertEquals("An empty reference '&;' should be survive the decoding",
 				"&;", HtmlUtils.htmlUnescape("&;"));
 
-		assertEquals("The longest character entity reference '&thetasym;' should be processable",
+		assertEquals("The longest character com.spring.entity reference '&thetasym;' should be processable",
 				"" + (char) 977, HtmlUtils.htmlUnescape("&thetasym;"));
 
 		assertEquals("A malformed decimal reference should survive the decoding",

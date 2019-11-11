@@ -40,22 +40,22 @@ import org.springframework.web.reactive.function.BodyInserter;
 import org.springframework.web.reactive.function.BodyInserters;
 
 /**
- * Entity-specific subtype of {@link ServerResponse} that exposes entity data.
+ * Entity-specific subtype of {@link ServerResponse} that exposes com.spring.entity data.
  *
  * @author Arjen Poutsma
  * @author Juergen Hoeller
  * @since 5.0
- * @param <T> the entity type
+ * @param <T> the com.spring.entity type
  */
 public interface EntityResponse<T> extends ServerResponse {
 
 	/**
-	 * Return the entity that makes up this response.
+	 * Return the com.spring.entity that makes up this response.
 	 */
 	T entity();
 
 	/**
-	 * Return the {@code BodyInserter} that writes the entity to the output stream.
+	 * Return the {@code BodyInserter} that writes the com.spring.entity to the output stream.
 	 */
 	BodyInserter<T, ? super ServerHttpResponse> inserter();
 
@@ -118,7 +118,7 @@ public interface EntityResponse<T> extends ServerResponse {
 		Builder<T> header(String headerName, String... headerValues);
 
 		/**
-		 * Copy the given headers into the entity's headers map.
+		 * Copy the given headers into the com.spring.entity's headers map.
 		 * @param headers the existing HttpHeaders to copy from
 		 * @return this builder
 		 * @see HttpHeaders#add(String, String)
@@ -177,8 +177,8 @@ public interface EntityResponse<T> extends ServerResponse {
 		Builder<T> allow(Set<HttpMethod> allowedMethods);
 
 		/**
-		 * Set the entity tag of the body, as specified by the {@code ETag} header.
-		 * @param etag the new entity tag
+		 * Set the com.spring.entity tag of the body, as specified by the {@code ETag} header.
+		 * @param etag the new com.spring.entity tag
 		 * @return this builder
 		 * @see HttpHeaders#setETag(String)
 		 */

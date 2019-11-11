@@ -66,7 +66,7 @@ import org.springframework.web.util.UriUtils;
  * by the server processing this form. The value is a space- and/or comma-delimited
  * list of charset values. The client must interpret this list as an exclusive-or
  * list, i.e., the server is able to accept any single character encoding per
- * entity received.</p></td>
+ * com.spring.entity received.</p></td>
  * </tr>
  * <tr class="rowColor">
  * <td><p>action</p></td>

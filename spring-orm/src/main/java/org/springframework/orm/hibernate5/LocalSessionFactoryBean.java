@@ -253,7 +253,7 @@ public class LocalSessionFactoryBean extends HibernateExceptionTranslator
 	}
 
 	/**
-	 * Set a Hibernate entity interceptor that allows to inspect and change
+	 * Set a Hibernate com.spring.entity interceptor that allows to inspect and change
 	 * property values before writing to and reading from the database.
 	 * Will get applied to any new Session created by this factory.
 	 * @see Configuration#setInterceptor
@@ -340,7 +340,7 @@ public class LocalSessionFactoryBean extends HibernateExceptionTranslator
 	}
 
 	/**
-	 * Specify custom type filters for Spring-based scanning for entity classes.
+	 * Specify custom type filters for Spring-based scanning for com.spring.entity classes.
 	 * <p>Default is to search all specified packages for classes annotated with
 	 * {@code @javax.persistence.Entity}, {@code @javax.persistence.Embeddable}
 	 * or {@code @javax.persistence.MappedSuperclass}.
@@ -351,7 +351,7 @@ public class LocalSessionFactoryBean extends HibernateExceptionTranslator
 	}
 
 	/**
-	 * Specify annotated entity classes to register with this Hibernate SessionFactory.
+	 * Specify annotated com.spring.entity classes to register with this Hibernate SessionFactory.
 	 * @see Configuration#addAnnotatedClass(Class)
 	 */
 	public void setAnnotatedClasses(Class<?>... annotatedClasses) {
@@ -368,7 +368,7 @@ public class LocalSessionFactoryBean extends HibernateExceptionTranslator
 	}
 
 	/**
-	 * Specify packages to search for autodetection of your entity classes in the
+	 * Specify packages to search for autodetection of your com.spring.entity classes in the
 	 * classpath. This is analogous to Spring's component-scan feature
 	 * ({@link org.springframework.context.annotation.ClassPathBeanDefinitionScanner}).
 	 */

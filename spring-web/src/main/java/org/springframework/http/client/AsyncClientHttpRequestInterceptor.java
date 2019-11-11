@@ -45,7 +45,7 @@ public interface AsyncClientHttpRequestInterceptor {
 	/**
 	 * Intercept the given request, and return a response future. The given
 	 * {@link AsyncClientHttpRequestExecution} allows the interceptor to pass on
-	 * the request to the next entity in the chain.
+	 * the request to the next com.spring.entity in the chain.
 	 * <p>An implementation might follow this pattern:
 	 * <ol>
 	 * <li>Examine the {@linkplain HttpRequest request} and body</li>

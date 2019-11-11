@@ -269,8 +269,8 @@ public interface ServerResponse {
 		B allow(Set<HttpMethod> allowedMethods);
 
 		/**
-		 * Set the entity tag of the body, as specified by the {@code ETag} header.
-		 * @param eTag the new entity tag
+		 * Set the com.spring.entity tag of the body, as specified by the {@code ETag} header.
+		 * @param eTag the new com.spring.entity tag
 		 * @return this builder
 		 * @see HttpHeaders#setETag(String)
 		 */
@@ -326,19 +326,19 @@ public interface ServerResponse {
 		B varyBy(String... requestHeaders);
 
 		/**
-		 * Build the response entity with no body.
+		 * Build the response com.spring.entity with no body.
 		 */
 		Mono<ServerResponse> build();
 
 		/**
-		 * Build the response entity with no body.
+		 * Build the response com.spring.entity with no body.
 		 * The response will be committed when the given {@code voidPublisher} completes.
 		 * @param voidPublisher publisher publisher to indicate when the response should be committed
 		 */
 		Mono<ServerResponse> build(Publisher<Void> voidPublisher);
 
 		/**
-		 * Build the response entity with a custom writer function.
+		 * Build the response com.spring.entity with a custom writer function.
 		 * @param writeFunction the function used to write to the {@link ServerWebExchange}
 		 */
 		Mono<ServerResponse> build(BiFunction<ServerWebExchange, Context, Mono<Void>> writeFunction);

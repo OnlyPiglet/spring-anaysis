@@ -49,7 +49,7 @@ import org.springframework.lang.Nullable;
  * Also supports the detection of annotated packages (through
  * {@link org.springframework.orm.jpa.persistenceunit.SmartPersistenceUnitInfo#getManagedPackages()}),
  * e.g. containing Hibernate {@link org.hibernate.annotations.FilterDef} annotations,
- * along with Spring-driven entity scanning which requires no {@code persistence.xml}
+ * along with Spring-driven com.spring.entity scanning which requires no {@code persistence.xml}
  * ({@link org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean#setPackagesToScan}).
  *
  * <p><b>A note about {@code HibernateJpaVendorAdapter} vs native Hibernate settings:</b>

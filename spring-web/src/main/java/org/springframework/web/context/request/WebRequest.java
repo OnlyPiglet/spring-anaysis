@@ -155,7 +155,7 @@ public interface WebRequest extends RequestAttributes {
 	 * <p><strong>Note:</strong> you can use either
 	 * this {@code #checkNotModified(long)} method; or
 	 * {@link #checkNotModified(String)}. If you want enforce both
-	 * a strong entity tag and a Last-Modified value,
+	 * a strong com.spring.entity tag and a Last-Modified value,
 	 * as recommended by the HTTP specification,
 	 * then you should use {@link #checkNotModified(String, long)}.
 	 * <p>If the "If-Modified-Since" header is set but cannot be parsed
@@ -172,7 +172,7 @@ public interface WebRequest extends RequestAttributes {
 
 	/**
 	 * Check whether the requested resource has been modified given the
-	 * supplied {@code ETag} (entity tag), as determined by the application.
+	 * supplied {@code ETag} (com.spring.entity tag), as determined by the application.
 	 * <p>This will also transparently set the "ETag" response header
 	 * and HTTP status when applicable.
 	 * <p>Typical usage:
@@ -190,10 +190,10 @@ public interface WebRequest extends RequestAttributes {
 	 * <p><strong>Note:</strong> you can use either
 	 * this {@code #checkNotModified(String)} method; or
 	 * {@link #checkNotModified(long)}. If you want enforce both
-	 * a strong entity tag and a Last-Modified value,
+	 * a strong com.spring.entity tag and a Last-Modified value,
 	 * as recommended by the HTTP specification,
 	 * then you should use {@link #checkNotModified(String, long)}.
-	 * @param etag the entity tag that the application determined
+	 * @param etag the com.spring.entity tag that the application determined
 	 * for the underlying resource. This parameter will be padded
 	 * with quotes (") if necessary.
 	 * @return true if the request does not require further processing.
@@ -202,7 +202,7 @@ public interface WebRequest extends RequestAttributes {
 
 	/**
 	 * Check whether the requested resource has been modified given the
-	 * supplied {@code ETag} (entity tag) and last-modified timestamp,
+	 * supplied {@code ETag} (com.spring.entity tag) and last-modified timestamp,
 	 * as determined by the application.
 	 * <p>This will also transparently set the "ETag" and "Last-Modified"
 	 * response headers, and HTTP status when applicable.
@@ -225,7 +225,7 @@ public interface WebRequest extends RequestAttributes {
 	 * setting both ETag and Last-Modified values, but you can also
 	 * use {@code #checkNotModified(String)} or
 	 * {@link #checkNotModified(long)}.
-	 * @param etag the entity tag that the application determined
+	 * @param etag the com.spring.entity tag that the application determined
 	 * for the underlying resource. This parameter will be padded
 	 * with quotes (") if necessary.
 	 * @param lastModifiedTimestamp the last-modified timestamp in

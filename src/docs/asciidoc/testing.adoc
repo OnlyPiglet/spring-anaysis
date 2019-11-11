@@ -147,7 +147,7 @@ configuration or lifecycle callback method when testing application code for use
 such as the following:
 
 * ORM frameworks (such as JPA and Hibernate) that condone `private` or `protected` field
-  access as opposed to `public` setter methods for properties in a domain entity.
+  access as opposed to `public` setter methods for properties in a domain com.spring.entity.
 * Spring's support for annotations (such as `@Autowired`, `@Inject`, and `@Resource`),
   that provide dependency injection for `private` or `protected` fields, setter methods,
   and configuration methods.
@@ -207,7 +207,7 @@ Doing so lets you test things such as:
 
 * The correct wiring of your Spring IoC container contexts.
 * Data access using JDBC or an ORM tool. This can include such things as the correctness
-  of SQL statements, Hibernate queries, JPA entity mappings, and so forth.
+  of SQL statements, Hibernate queries, JPA com.spring.entity mappings, and so forth.
 
 The Spring Framework provides first-class support for integration testing in the
 `spring-test` module. The name of the actual JAR file might include the release version
@@ -284,7 +284,7 @@ graphs, transactional proxies, `DataSource` instances, and others), thus avoidin
 need to duplicate complex test fixture setup for individual test cases.
 
 As an example, consider a scenario where we have a class (`HibernateTitleRepository`)
-that implements data access logic for a `Title` domain entity. We want to write
+that implements data access logic for a `Title` domain com.spring.entity. We want to write
 integration tests that test the following areas:
 
 * The Spring configuration: Basically, is everything related to the configuration of the

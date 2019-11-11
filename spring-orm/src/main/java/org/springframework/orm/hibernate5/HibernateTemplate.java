@@ -873,7 +873,7 @@ public class HibernateTemplate implements HibernateOperations, InitializingBean 
 			@Nullable final String entityName, final T exampleEntity, final int firstResult, final int maxResults)
 			throws DataAccessException {
 
-		Assert.notNull(exampleEntity, "Example entity must not be null");
+		Assert.notNull(exampleEntity, "Example com.spring.entity must not be null");
 		return nonNull(executeWithNativeSession((HibernateCallback<List<T>>) session -> {
 			Criteria executableCriteria = (entityName != null ?
 					session.createCriteria(entityName) : session.createCriteria(exampleEntity.getClass()));

@@ -19,7 +19,7 @@ package org.springframework.cache.config;
 import org.springframework.util.ObjectUtils;
 
 /**
- * Simple test entity for use with caching tests.
+ * Simple test com.spring.entity for use with caching tests.
  *
  * @author Michael Plod
  */

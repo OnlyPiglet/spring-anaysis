@@ -40,7 +40,7 @@ public class EntityExchangeResult<T> extends ExchangeResult {
 
 
 	/**
-	 * Return the entity extracted from the response body.
+	 * Return the com.spring.entity extracted from the response body.
 	 */
 	@Nullable
 	public T getResponseBody() {

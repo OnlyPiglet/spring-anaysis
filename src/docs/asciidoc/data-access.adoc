@@ -5804,7 +5804,7 @@ the underlying implementation in order to provide additional features.
 ==== Three Options for JPA Setup in a Spring Environment
 
 The Spring JPA support offers three ways of setting up the JPA `EntityManagerFactory`
-that is used by the application to obtain an entity manager.
+that is used by the application to obtain an com.spring.entity manager.
 
 * <<orm-jpa-setup-lemfb>>
 * <<orm-jpa-setup-jndi>>
@@ -5932,11 +5932,11 @@ The following example shows a typical `persistence.xml` file:
 ====
 
 NOTE: The `<exclude-unlisted-classes/>` shortcut indicates that no scanning for
-annotated entity classes is supposed to occur. An explicit 'true' value
+annotated com.spring.entity classes is supposed to occur. An explicit 'true' value
 (`<exclude-unlisted-classes>true</exclude-unlisted-classes/>`) also means no scan.
 `<exclude-unlisted-classes>false</exclude-unlisted-classes/>` does trigger a scan.
 However, we recommend omitting the `exclude-unlisted-classes` element
-if you want entity class scanning to occur.
+if you want com.spring.entity class scanning to occur.
 
 Using the `LocalContainerEntityManagerFactoryBean` is the most powerful JPA setup
 option, allowing for flexible local configuration within the application. It supports

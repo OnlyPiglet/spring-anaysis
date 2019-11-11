@@ -33,7 +33,7 @@ public interface ExchangeFilterFunction {
 
 	/**
 	 * Apply this filter to the given request and exchange function.
-	 * <p>The given {@linkplain ExchangeFunction} represents the next entity
+	 * <p>The given {@linkplain ExchangeFunction} represents the next com.spring.entity
 	 * in the chain, to be invoked via
 	 * {@linkplain ExchangeFunction#exchange(ClientRequest) invoked} in order to
 	 * proceed with the exchange, or not invoked to shortcut the chain.

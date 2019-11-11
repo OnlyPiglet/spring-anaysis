@@ -62,7 +62,7 @@ public class CandidateComponentsIndexTests {
 	public void getCandidateTypesNoMatch() {
 		CandidateComponentsIndex index = new CandidateComponentsIndex(
 				Collections.singletonList(createSampleProperties()));
-		Set<String> actual = index.getCandidateTypes("com.example.service", "entity");
+		Set<String> actual = index.getCandidateTypes("com.example.service", "com.spring.entity");
 		assertThat(actual, hasSize(0));
 	}
 
@@ -70,10 +70,10 @@ public class CandidateComponentsIndexTests {
 	public void mergeCandidateStereotypes() {
 		CandidateComponentsIndex index = new CandidateComponentsIndex(Arrays.asList(
 				createProperties("com.example.Foo", "service"),
-				createProperties("com.example.Foo", "entity")));
+				createProperties("com.example.Foo", "com.spring.entity")));
 		assertThat(index.getCandidateTypes("com.example", "service"),
 				contains("com.example.Foo"));
-		assertThat(index.getCandidateTypes("com.example", "entity"),
+		assertThat(index.getCandidateTypes("com.example", "com.spring.entity"),
 				contains("com.example.Foo"));
 	}
 
@@ -88,7 +88,7 @@ public class CandidateComponentsIndexTests {
 		properties.put("com.example.service.One", "service");
 		properties.put("com.example.service.sub.Two", "service");
 		properties.put("com.example.service.Three", "service");
-		properties.put("com.example.domain.Four", "entity");
+		properties.put("com.example.domain.Four", "com.spring.entity");
 		return properties;
 	}
 

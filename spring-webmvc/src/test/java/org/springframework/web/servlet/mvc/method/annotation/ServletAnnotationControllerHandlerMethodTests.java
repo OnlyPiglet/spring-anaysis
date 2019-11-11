@@ -954,7 +954,7 @@ public class ServletAnnotationControllerHandlerMethodTests extends AbstractServl
 			wac.registerBeanDefinition("handlerAdapter", adapterDef);
 		}, ResponseEntityController.class);
 
-		MockHttpServletRequest request = new MockHttpServletRequest("GET", "/test-entity");
+		MockHttpServletRequest request = new MockHttpServletRequest("GET", "/test-com.spring.entity");
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		getServlet().service(request, response);
 		assertEquals(200, response.getStatus());
@@ -1565,7 +1565,7 @@ public class ServletAnnotationControllerHandlerMethodTests extends AbstractServl
 	public void flashAttributesWithResponseEntity() throws Exception {
 		initServletWithControllers(RedirectAttributesController.class);
 
-		MockHttpServletRequest request = new MockHttpServletRequest("POST", "/messages-response-entity");
+		MockHttpServletRequest request = new MockHttpServletRequest("POST", "/messages-response-com.spring.entity");
 		MockHttpServletResponse response = new MockHttpServletResponse();
 		HttpSession session = request.getSession();
 
@@ -3405,7 +3405,7 @@ public class ServletAnnotationControllerHandlerMethodTests extends AbstractServl
 			return ResponseEntity.ok().body("body");
 		}
 
-		@GetMapping("/test-entity")
+		@GetMapping("/test-com.spring.entity")
 		public ResponseEntity<TestEntity> testEntity() {
 			TestEntity entity = new TestEntity();
 			entity.setName("Foo Bar");
@@ -3544,7 +3544,7 @@ public class ServletAnnotationControllerHandlerMethodTests extends AbstractServl
 			return "redirect:/messages/{id}";
 		}
 
-		@PostMapping("/messages-response-entity")
+		@PostMapping("/messages-response-com.spring.entity")
 		public ResponseEntity<Void> sendMessage(RedirectAttributes attributes) {
 			attributes.addFlashAttribute("successMessage", "yay!");
 			URI location = URI.create("/messages/1?name=value");

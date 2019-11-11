@@ -301,7 +301,7 @@ public class RequestEntity<T> extends HttpEntity<T> {
 
 
 	/**
-	 * Defines a builder that adds headers to the request entity.
+	 * Defines a builder that adds headers to the request com.spring.entity.
 	 * @param <B> the builder subclass
 	 */
 	public interface HeadersBuilder<B extends HeadersBuilder<B>> {
@@ -358,8 +358,8 @@ public class RequestEntity<T> extends HttpEntity<T> {
 		B ifNoneMatch(String... ifNoneMatches);
 
 		/**
-		 * Builds the request entity with no body.
-		 * @return the request entity
+		 * Builds the request com.spring.entity with no body.
+		 * @return the request com.spring.entity
 		 * @see BodyBuilder#body(Object)
 		 */
 		RequestEntity<Void> build();
@@ -367,7 +367,7 @@ public class RequestEntity<T> extends HttpEntity<T> {
 
 
 	/**
-	 * Defines a builder that adds a body to the response entity.
+	 * Defines a builder that adds a body to the response com.spring.entity.
 	 */
 	public interface BodyBuilder extends HeadersBuilder<BodyBuilder> {
 
@@ -390,19 +390,19 @@ public class RequestEntity<T> extends HttpEntity<T> {
 		BodyBuilder contentType(MediaType contentType);
 
 		/**
-		 * Set the body of the request entity and build the RequestEntity.
+		 * Set the body of the request com.spring.entity and build the RequestEntity.
 		 * @param <T> the type of the body
-		 * @param body the body of the request entity
-		 * @return the built request entity
+		 * @param body the body of the request com.spring.entity
+		 * @return the built request com.spring.entity
 		 */
 		<T> RequestEntity<T> body(T body);
 
 		/**
-		 * Set the body and type of the request entity and build the RequestEntity.
+		 * Set the body and type of the request com.spring.entity and build the RequestEntity.
 		 * @param <T> the type of the body
-		 * @param body the body of the request entity
+		 * @param body the body of the request com.spring.entity
 		 * @param type the type of the body, useful for generic type resolution
-		 * @return the built request entity
+		 * @return the built request com.spring.entity
 		 * @since 4.3
 		 */
 		<T> RequestEntity<T> body(T body, Type type);

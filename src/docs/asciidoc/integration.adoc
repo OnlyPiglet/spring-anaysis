@@ -1847,7 +1847,7 @@ customizing the acknowledgment mode. If feasible for your scenario, This is stro
 recommended over externally managed transactions -- that is, if you can live with
 occasional duplicate messages in case of the JVM dying. Custom duplicate message
 detection steps in your business logic can cover such situations -- for example,
-in the form of a business entity existence check or a protocol table check.
+in the form of a business com.spring.entity existence check or a protocol table check.
 Any such arrangements are significantly more efficient than the alternative:
 wrapping your entire processing with an XA transaction (through configuring your
 `DefaultMessageListenerContainer` with an `JtaTransactionManager`) to cover the
@@ -7136,7 +7136,7 @@ support of <<cache-jsr-107,JSR-107 annotations>> and more customization options.
 
 The terms, "`buffer`" and "`cache,`" tend to be used interchangeably. Note, however,
 that they represent different things. Traditionally, a buffer is used as an intermediate
-temporary store for data between a fast and a slow entity. As one party would has to wait
+temporary store for data between a fast and a slow com.spring.entity. As one party would has to wait
 for the other (which affects performance), the buffer alleviates this by allowing entire
 blocks of data to move at once rather then in small chunks. The data is written and read
 only once from the buffer. Furthermore, the buffers are visible to at least one party
@@ -7474,7 +7474,7 @@ only want to cache paperback books, as the following example does:
 ====
 
 The cache abstraction supports `java.util.Optional`, using its content as the cached value
-only if it is present. `#result` always refers to the business entity and never a
+only if it is present. `#result` always refers to the business com.spring.entity and never a
 supported wrapper, so the previous example can be rewritten as follows:
 
 ====
@@ -8084,7 +8084,7 @@ in the preceding example by defining the target cache through the `cache:definit
 === Configuring the Cache Storage
 
 The cache abstraction provides several storage integration options. To use them, you need
-to declare an appropriate `CacheManager` (an entity that controls and manages `Cache`
+to declare an appropriate `CacheManager` (an com.spring.entity that controls and manages `Cache`
 instances and that can be used to retrieve these for storage).
 
 

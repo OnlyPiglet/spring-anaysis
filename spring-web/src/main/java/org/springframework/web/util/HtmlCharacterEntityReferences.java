@@ -27,7 +27,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * Represents a set of character entity references defined by the
+ * Represents a set of character com.spring.entity references defined by the
  * HTML 4.0 standard.
  *
  * <p>A complete description of the HTML 4.0 character set can be found
@@ -59,7 +59,7 @@ class HtmlCharacterEntityReferences {
 
 
 	/**
-	 * Returns a new set of character entity references reflecting the HTML 4.0 character set.
+	 * Returns a new set of character com.spring.entity references reflecting the HTML 4.0 character set.
 	 */
 	public HtmlCharacterEntityReferences() {
 		Properties entityReferences = new Properties();
@@ -89,7 +89,7 @@ class HtmlCharacterEntityReferences {
 			String key = (String) keys.nextElement();
 			int referredChar = Integer.parseInt(key);
 			Assert.isTrue((referredChar < 1000 || (referredChar >= 8000 && referredChar < 10000)),
-					() -> "Invalid reference to special HTML entity: " + referredChar);
+					() -> "Invalid reference to special HTML com.spring.entity: " + referredChar);
 			int index = (referredChar < 1000 ? referredChar : referredChar - 7000);
 			String reference = entityReferences.getProperty(key);
 			this.characterToEntityReferenceMap[index] = REFERENCE_START + reference + REFERENCE_END;
@@ -99,21 +99,21 @@ class HtmlCharacterEntityReferences {
 
 
 	/**
-	 * Return the number of supported entity references.
+	 * Return the number of supported com.spring.entity references.
 	 */
 	public int getSupportedReferenceCount() {
 		return this.entityReferenceToCharacterMap.size();
 	}
 
 	/**
-	 * Return true if the given character is mapped to a supported entity reference.
+	 * Return true if the given character is mapped to a supported com.spring.entity reference.
 	 */
 	public boolean isMappedToReference(char character) {
 		return isMappedToReference(character, WebUtils.DEFAULT_CHARACTER_ENCODING);
 	}
 
 	/**
-	 * Return true if the given character is mapped to a supported entity reference.
+	 * Return true if the given character is mapped to a supported com.spring.entity reference.
 	 */
 	public boolean isMappedToReference(char character, String encoding) {
 		return (convertToReference(character, encoding) != null);

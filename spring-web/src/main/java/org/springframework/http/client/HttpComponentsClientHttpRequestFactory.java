@@ -319,7 +319,7 @@ public class HttpComponentsClientHttpRequestFactory implements ClientHttpRequest
 	 * extends {@link org.apache.http.client.methods.HttpEntityEnclosingRequestBase}
 	 * rather than {@link org.apache.http.client.methods.HttpRequestBase} and
 	 * hence allows HTTP delete with a request body. For use with the RestTemplate
-	 * exchange methods which allow the combination of HTTP DELETE with an entity.
+	 * exchange methods which allow the combination of HTTP DELETE with an com.spring.entity.
 	 * @since 4.1.2
 	 */
 	private static class HttpDelete extends HttpEntityEnclosingRequestBase {

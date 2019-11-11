@@ -1354,7 +1354,7 @@ application/xhtml+xml				xhtml xht
 # application/xhtml-voice+xml
 application/xml					xml xsl
 application/xml-dtd				dtd
-# application/xml-external-parsed-entity
+# application/xml-external-parsed-com.spring.entity
 # application/xml-patch+xml
 # application/xmpp+xml
 application/xop+xml				xop
@@ -1756,7 +1756,7 @@ text/x-uuencode					uu
 text/x-vcalendar				vcs
 text/x-vcard					vcf
 # text/xml
-# text/xml-external-parsed-entity
+# text/xml-external-parsed-com.spring.entity
 # video/1d-interleaved-parityfec
 video/3gpp					3gp
 # video/3gpp-tt
